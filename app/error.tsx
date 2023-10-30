@@ -1,0 +1,21 @@
+'use client';
+import React from 'react';
+
+interface Props {
+  error: Error;
+  reset: () => void;
+}
+
+const ErrorPage = ({ error, reset }: Props) => {
+  console.log('Error!!', error);
+  return (
+    <>
+      <div>Something went wrong</div>{' '}
+      <button className='btn' type='button' onClick={() => reset()}>
+        Retry
+      </button>
+    </>
+  );
+};
+
+export default ErrorPage;
